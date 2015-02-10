@@ -1,0 +1,14 @@
+{
+  "manifest_version" : 2,
+  "name": "Pandora's Box",
+  "version": "2.0",
+  "description": "This extension allows you to save your favorite songs to Grooveshark",
+  "permissions": ["tabs", "*://*.pandora.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.pandora.com/*"],
+      "js": ["pandora.js", "jquery.min.js"]
+    }
+  ],
+  "web_accessible_resources": ["jquery.min.js", "pandora.js"]
+}
